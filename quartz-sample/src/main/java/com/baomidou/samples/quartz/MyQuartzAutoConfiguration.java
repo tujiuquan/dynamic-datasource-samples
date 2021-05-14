@@ -14,12 +14,19 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
 
+/**
+ * @author quange
+ */
 @Configuration
 @AutoConfigureAfter(DynamicDataSourceAutoConfiguration.class)
 public class MyQuartzAutoConfiguration {
 
+    private final DataSourceProperties dataSourceProperties;
+
     @Autowired
-    private DataSourceProperties dataSourceProperties;
+    public MyQuartzAutoConfiguration(DataSourceProperties dataSourceProperties) {
+        this.dataSourceProperties = dataSourceProperties;
+    }
 
     @Order(1)
     @Bean

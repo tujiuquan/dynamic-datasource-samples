@@ -6,7 +6,7 @@ import org.quartz.JobExecutionException;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
 @Slf4j
-public class HelloworldJob extends QuartzJobBean {
+public class HelloWorldJob extends QuartzJobBean {
 
     private static int time = 0;
 
